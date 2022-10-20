@@ -1,0 +1,37 @@
+
+
+
+/*body{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+/*p{*/
+/*    margin: 0;*/
+/*}*/
+/*.tempback{*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    padding-top: 20px;*/
+/*    background-image: url("../images/frametemp-s.jpg");*/
+/*    background-size: cover;*/
+
+/*}*/
+/*.numbertemp{*/
+/*    padding: 0px 0 0 120px;*/
+/*    font-size: 30px;*/
+/*    opacity: 0;*/
+/*}*/
+
+/*@media screen and (min-width: 500px) {*/
+/*    .tempback{*/
+/*        padding-top: 60px;*/
+/*        background-image: url("../images/frametemp.jpeg");*/
+/*    }*/
+/*    .numbertemp{*/
+/*        padding: 60px 0 0 190px;*/
+/*        font-size: 40px;*/
+/*        opacity: 0;*/
+/*    }*/
+/*}*/
