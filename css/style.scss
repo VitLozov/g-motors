@@ -4,6 +4,38 @@
   }
 }
 
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
+
+:root {
+  --color-primary: #002626;
+  --color-secondary: #F0F7EE;
+  --duration: 1s;
+  --nav-duration: calc(var(--duration) / 4);
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --space: 1rem;
+  --font-primary: 'Helvetica', sans-serif;
+  --font-heading: 'Merriweather', serif;
+  --font-size: 1.125rem;
+  --line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+}
+
+h1 {
+  margin-bottom: calc(var(--space) * 3);
+  font-family: var(--font-heading);
+  font-size: calc(var(--font-size) + 6vmin);
+  line-height: calc(var(--line-height) / 1.25);
+}
+
 body {
   font-family: 'Helvetica', 'Roboto', sans-serif;
 }
@@ -190,7 +222,7 @@ header {
       display: inline-block;
       position: absolute;
       z-index: 14;
-      bottom: 40px;
+      bottom: 50px;
       left: 47%;
     }
   }
@@ -222,13 +254,19 @@ header {
       left: 56%;
     }
   }
-
-
 }
 
 .sec-carousel {
   padding-top: 100px;
+  padding-bottom: 100px;
+
+  background-color: rgba(189, 189, 189, 1);
+  @include max-screen(576px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
+
 
 .car-block {
   transition-duration: 4s;
@@ -310,10 +348,298 @@ header {
   }
 }
 
-.sec-carousel {
-  height: 100vh;
-  background-color: rgba(189, 189, 189, 1);
+.tight-container {
+  max-width: 84%;
+  margin: auto;
 }
+
+.sec-how-to-buy {
+  background-color: rgba(63, 63, 63, 1);
+  padding-top: 80px;
+  padding-bottom: 0px;
+  color: white;
+  overflow: hidden;
+  @include max-screen(1199px) {
+    .tight-container {
+      max-width: 100%;
+    }
+  }
+
+  .htb-title {
+    margin-bottom: 40px;
+  }
+
+  .htb-list {
+    margin-bottom: 0;
+  }
+
+  .htb-item {
+    list-style: none;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 10px;
+    height: 60px;
+
+    .htb-item-num {
+      font-size: 60px;
+      position: relative;
+    }
+
+    .htb-item-green {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: rgba(150, 195, 78, 1);
+      position: absolute;
+      bottom: 0;
+    }
+
+    .htb-item-info {
+      padding-left: 30px;
+      font-size: 18px;
+      display: inline-block;
+      width: 80%;
+      line-height: 20px;
+
+      @include max-screen(575px) {
+        font-size: 16px;
+        font-weight: 100;
+      }
+    }
+
+    .htb-carimg-cont {
+      position: absolute;
+      left: -220px;
+      top: -15px;
+      z-index: 0;
+      @include max-screen(991px) {
+        left: 120px;
+        top: 30px;
+      }
+      @include max-screen(575px) {
+        left: 10px;
+        top: 33px;
+      }
+
+      img {
+        max-width: 1180px;
+        z-index: 0;
+        @include max-screen(991px) {
+          max-width: 700px;
+        }
+        @include max-screen(767px) {
+          max-width: 600px;
+        }
+      }
+    }
+  }
+
+  .last-item-8 {
+    margin-bottom: 250px;
+    @include max-screen(767px) {
+      margin-bottom: 280px;
+    }
+  }
+
+  .htb-last-text {
+    margin-bottom: 160px;
+    z-index: 1;
+    @include max-screen(767px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .line-sec {
+    width: 100%;
+  }
+}
+
+.sec-faq {
+  padding-top: 70px;
+  background-color: rgba(63, 63, 63, 1);
+  padding-bottom: 50px;
+  color: white;
+  overflow: hidden;
+  @include max-screen(767px) {
+    padding-bottom: 30px;
+  }
+
+  .tight-container-faq {
+    width: 84%;
+    margin: auto;
+    @include max-screen(767px) {
+        width: 100%;
+    }
+  }
+
+
+
+  .accordion-flush {
+    .accordion-item {
+      background-color: rgba(63, 63, 63, 1);
+      border-bottom: 2px solid white;
+    }
+
+    .accordion-button {
+      background-color: rgba(63, 63, 63, 1);
+      color: white;
+      border: none;
+      box-shadow: none;
+      font-size: 18px;
+      @include max-screen(767px) {
+        font-size: 16px;
+      }
+
+      :focus {
+        border: none;
+      }
+
+    }
+
+    .accordion-body {
+      font-size: 16px;
+      font-weight: 100;
+      @include max-screen(767px) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .sec-plus-title {
+    margin-top: 175px;
+    @include max-screen(767px) {
+      margin-top: 105px;
+    }
+  }
+}
+
+.sec-plus {
+  background-color: rgba(63, 63, 63, 1);
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: white;
+  overflow: hidden;
+  position: relative;
+
+  .plus-list {
+    list-style: none;
+    @include max-screen(767px) {
+      margin-top: 300px;
+    }
+    @include max-screen(575px) {
+      margin-top: 220px;
+    }
+  }
+
+  .plus-item {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 100;
+    @include max-screen(767px) {
+      font-size: 14px;
+    }
+  }
+
+  .plus-green {
+    height: 20px;
+    width: 20px;
+    background-color: rgba(150, 195, 78, 1);
+    display: inline-block;
+    border-radius: 50%;
+    margin: auto;
+    --bs-gutter-x: 0;
+  }
+
+  .plus-back-img {
+    background-image: url("../images/zeekr-salon.jpg");
+    position: absolute;
+    height: 83%;
+    width: 83%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 40px;
+    left: -42%;
+    top: 5%;
+    @include max-screen(767px) {
+      border-radius: 0;
+      height: 33%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      background-position: center;
+    }
+    @include max-screen(575px) {
+      height: 20%;
+    }
+  }
+}
+
+
+.sec-contacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgba(63, 63, 63, 1);
+  color: white;
+.cont-item{
+  margin-bottom: 20px;
+  @include max-screen(575px) {
+    margin-left: 38px;
+  }
+}
+  .line-contacts {
+    width: 100%;
+    top: 30%;
+  }
+
+  .sec-contacts-title {
+    position: center;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  .cont-img {
+    background: rgba(150, 195, 78, 0.4);
+    filter: blur(15px);
+    height: 50px;
+    width: 50px;
+    top: 0%;
+
+  }
+
+  img {
+    padding: 0;
+    max-width: 50px;
+  }
+
+  .cont-phone {
+    font-size: 20px;
+    line-height: 50px;
+  }
+
+  .cont-email {
+    //font-size: 20px;
+    line-height: 50px;
+  }
+
+  .cont-telega {
+    line-height: 50px;
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+}
+
+
+footer {
+  border-top: 2px solid rgba(150, 195, 78, 1);
+  padding-bottom: 30px;
+  background-color: rgba(63, 63, 63, 1);
+}
+
 
 //________________
 
@@ -324,37 +650,37 @@ header {
   }
 }
 
-@import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
-
-:root {
-  --color-primary: #002626;
-  --color-secondary: #F0F7EE;
-  --duration: 1s;
-  --nav-duration: calc(var(--duration) / 4);
-  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
-  --space: 1rem;
-  --font-primary: 'Helvetica', sans-serif;
-  --font-heading: 'Merriweather', serif;
-  --font-size: 1.125rem;
-  --line-height: 1.5;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-primary);
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-}
-
-h1 {
-  margin-bottom: calc(var(--space) * 3);
-  font-family: var(--font-heading);
-  font-size: calc(var(--font-size) + 6vmin);
-  line-height: calc(var(--line-height) / 1.25);
-}
+//@import url('https://fonts.googleapis.com/css?family=Merriweather:900&display=swap');
+//
+//:root {
+//  --color-primary: #002626;
+//  --color-secondary: #F0F7EE;
+//  --duration: 1s;
+//  --nav-duration: calc(var(--duration) / 4);
+//  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+//  --space: 1rem;
+//  --font-primary: 'Helvetica', sans-serif;
+//  --font-heading: 'Merriweather', serif;
+//  --font-size: 1.125rem;
+//  --line-height: 1.5;
+//}
+//
+//* {
+//  box-sizing: border-box;
+//}
+//
+//body {
+//  font-family: var(--font-primary);
+//  font-size: var(--font-size);
+//  line-height: var(--line-height);
+//}
+//
+//h1 {
+//  margin-bottom: calc(var(--space) * 3);
+//  font-family: var(--font-heading);
+//  font-size: calc(var(--font-size) + 6vmin);
+//  line-height: calc(var(--line-height) / 1.25);
+//}
 
 .main-navigation-toggle {
   position: fixed;

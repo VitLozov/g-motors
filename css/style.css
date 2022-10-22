@@ -1,4 +1,30 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:900&display=swap");
+:root {
+  --color-primary: #002626;
+  --color-secondary: #F0F7EE;
+  --duration: 1s;
+  --nav-duration: calc(var(--duration) / 4);
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --space: 1rem;
+  --font-primary: 'Helvetica', sans-serif;
+  --font-heading: 'Merriweather', serif;
+  --font-size: 1.125rem;
+  --line-height: 1.5; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size);
+  line-height: var(--line-height); }
+
+h1 {
+  margin-bottom: calc(var(--space) * 3);
+  font-family: var(--font-heading);
+  font-size: calc(var(--font-size) + 6vmin);
+  line-height: calc(var(--line-height) / 1.25); }
+
 body {
   font-family: 'Helvetica', 'Roboto', sans-serif; }
 
@@ -137,7 +163,7 @@ header {
         display: inline-block;
         position: absolute;
         z-index: 14;
-        bottom: 40px;
+        bottom: 50px;
         left: 47%; } }
   .sec-main .main-button {
     font-size: 30px;
@@ -165,7 +191,13 @@ header {
         left: 56%; } }
 
 .sec-carousel {
-  padding-top: 100px; }
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #bdbdbd; }
+  @media screen and (max-width: 576px) {
+    .sec-carousel {
+      padding-top: 30px;
+      padding-bottom: 30px; } }
 
 .car-block {
   transition-duration: 4s;
@@ -216,41 +248,226 @@ header {
     top: 23%;
     right: 0; }
 
-.sec-carousel {
-  height: 100vh;
-  background-color: #bdbdbd; }
+.tight-container {
+  max-width: 84%;
+  margin: auto; }
+
+.sec-how-to-buy {
+  background-color: #3f3f3f;
+  padding-top: 80px;
+  padding-bottom: 0px;
+  color: white;
+  overflow: hidden; }
+  @media screen and (max-width: 1199px) {
+    .sec-how-to-buy .tight-container {
+      max-width: 100%; } }
+  .sec-how-to-buy .htb-title {
+    margin-bottom: 40px; }
+  .sec-how-to-buy .htb-list {
+    margin-bottom: 0; }
+  .sec-how-to-buy .htb-item {
+    list-style: none;
+    position: relative;
+    line-height: 1;
+    margin-bottom: 10px;
+    height: 60px; }
+    .sec-how-to-buy .htb-item .htb-item-num {
+      font-size: 60px;
+      position: relative; }
+    .sec-how-to-buy .htb-item .htb-item-green {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: #96c34e;
+      position: absolute;
+      bottom: 0; }
+    .sec-how-to-buy .htb-item .htb-item-info {
+      padding-left: 30px;
+      font-size: 18px;
+      display: inline-block;
+      width: 80%;
+      line-height: 20px; }
+      @media screen and (max-width: 575px) {
+        .sec-how-to-buy .htb-item .htb-item-info {
+          font-size: 16px;
+          font-weight: 100; } }
+    .sec-how-to-buy .htb-item .htb-carimg-cont {
+      position: absolute;
+      left: -220px;
+      top: -15px;
+      z-index: 0; }
+      @media screen and (max-width: 991px) {
+        .sec-how-to-buy .htb-item .htb-carimg-cont {
+          left: 120px;
+          top: 30px; } }
+      @media screen and (max-width: 575px) {
+        .sec-how-to-buy .htb-item .htb-carimg-cont {
+          left: 10px;
+          top: 33px; } }
+      .sec-how-to-buy .htb-item .htb-carimg-cont img {
+        max-width: 1180px;
+        z-index: 0; }
+        @media screen and (max-width: 991px) {
+          .sec-how-to-buy .htb-item .htb-carimg-cont img {
+            max-width: 700px; } }
+        @media screen and (max-width: 767px) {
+          .sec-how-to-buy .htb-item .htb-carimg-cont img {
+            max-width: 600px; } }
+  .sec-how-to-buy .last-item-8 {
+    margin-bottom: 250px; }
+    @media screen and (max-width: 767px) {
+      .sec-how-to-buy .last-item-8 {
+        margin-bottom: 280px; } }
+  .sec-how-to-buy .htb-last-text {
+    margin-bottom: 160px;
+    z-index: 1; }
+    @media screen and (max-width: 767px) {
+      .sec-how-to-buy .htb-last-text {
+        margin-bottom: 40px; } }
+  .sec-how-to-buy .line-sec {
+    width: 100%; }
+
+.sec-faq {
+  padding-top: 70px;
+  background-color: #3f3f3f;
+  padding-bottom: 50px;
+  color: white;
+  overflow: hidden; }
+  @media screen and (max-width: 767px) {
+    .sec-faq {
+      padding-bottom: 30px; } }
+  .sec-faq .tight-container-faq {
+    width: 84%;
+    margin: auto; }
+    @media screen and (max-width: 767px) {
+      .sec-faq .tight-container-faq {
+        width: 100%; } }
+  .sec-faq .accordion-flush .accordion-item {
+    background-color: #3f3f3f;
+    border-bottom: 2px solid white; }
+  .sec-faq .accordion-flush .accordion-button {
+    background-color: #3f3f3f;
+    color: white;
+    border: none;
+    box-shadow: none;
+    font-size: 18px; }
+    @media screen and (max-width: 767px) {
+      .sec-faq .accordion-flush .accordion-button {
+        font-size: 16px; } }
+    .sec-faq .accordion-flush .accordion-button :focus {
+      border: none; }
+  .sec-faq .accordion-flush .accordion-body {
+    font-size: 16px;
+    font-weight: 100; }
+    @media screen and (max-width: 767px) {
+      .sec-faq .accordion-flush .accordion-body {
+        font-size: 14px; } }
+  .sec-faq .sec-plus-title {
+    margin-top: 175px; }
+    @media screen and (max-width: 767px) {
+      .sec-faq .sec-plus-title {
+        margin-top: 105px; } }
+
+.sec-plus {
+  background-color: #3f3f3f;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: white;
+  overflow: hidden;
+  position: relative; }
+  .sec-plus .plus-list {
+    list-style: none; }
+    @media screen and (max-width: 767px) {
+      .sec-plus .plus-list {
+        margin-top: 300px; } }
+    @media screen and (max-width: 575px) {
+      .sec-plus .plus-list {
+        margin-top: 220px; } }
+  .sec-plus .plus-item {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: 100; }
+    @media screen and (max-width: 767px) {
+      .sec-plus .plus-item {
+        font-size: 14px; } }
+  .sec-plus .plus-green {
+    height: 20px;
+    width: 20px;
+    background-color: #96c34e;
+    display: inline-block;
+    border-radius: 50%;
+    margin: auto;
+    --bs-gutter-x: 0; }
+  .sec-plus .plus-back-img {
+    background-image: url("../images/zeekr-salon.jpg");
+    position: absolute;
+    height: 83%;
+    width: 83%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 40px;
+    left: -42%;
+    top: 5%; }
+    @media screen and (max-width: 767px) {
+      .sec-plus .plus-back-img {
+        border-radius: 0;
+        height: 33%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        background-position: center; } }
+    @media screen and (max-width: 575px) {
+      .sec-plus .plus-back-img {
+        height: 20%; } }
+
+.sec-contacts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #3f3f3f;
+  color: white; }
+  .sec-contacts .cont-item {
+    margin-bottom: 20px; }
+    @media screen and (max-width: 575px) {
+      .sec-contacts .cont-item {
+        margin-left: 38px; } }
+  .sec-contacts .line-contacts {
+    width: 100%;
+    top: 30%; }
+  .sec-contacts .sec-contacts-title {
+    position: center;
+    text-align: center;
+    margin-bottom: 100px; }
+  .sec-contacts .cont-img {
+    background: rgba(150, 195, 78, 0.4);
+    filter: blur(15px);
+    height: 50px;
+    width: 50px;
+    top: 0%; }
+  .sec-contacts img {
+    padding: 0;
+    max-width: 50px; }
+  .sec-contacts .cont-phone {
+    font-size: 20px;
+    line-height: 50px; }
+  .sec-contacts .cont-email {
+    line-height: 50px; }
+  .sec-contacts .cont-telega {
+    line-height: 50px; }
+    .sec-contacts .cont-telega a {
+      text-decoration: none;
+      color: white; }
+
+footer {
+  border-top: 2px solid #96c34e;
+  padding-bottom: 30px;
+  background-color: #3f3f3f; }
 
 .menu-mobile {
   display: none; }
   @media screen and (max-width: 992px) {
     .menu-mobile {
       display: block; } }
-
-:root {
-  --color-primary: #002626;
-  --color-secondary: #F0F7EE;
-  --duration: 1s;
-  --nav-duration: calc(var(--duration) / 4);
-  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
-  --space: 1rem;
-  --font-primary: 'Helvetica', sans-serif;
-  --font-heading: 'Merriweather', serif;
-  --font-size: 1.125rem;
-  --line-height: 1.5; }
-
-* {
-  box-sizing: border-box; }
-
-body {
-  font-family: var(--font-primary);
-  font-size: var(--font-size);
-  line-height: var(--line-height); }
-
-h1 {
-  margin-bottom: calc(var(--space) * 3);
-  font-family: var(--font-heading);
-  font-size: calc(var(--font-size) + 6vmin);
-  line-height: calc(var(--line-height) / 1.25); }
 
 .main-navigation-toggle {
   position: fixed;
