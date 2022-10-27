@@ -276,6 +276,14 @@ header {
   overflow: hidden;
   position: relative;
   margin-bottom: 30px;
+  .carnames {
+    font-size: 32px;
+    position: absolute;
+    color: white;
+    top: 3%;
+    left: 10%;
+    z-index: 24;
+  }
 
   .greenback {
     position: absolute;
@@ -297,18 +305,22 @@ header {
   .carplace {
     min-height: 200px;
     position: relative;
+    //padding-left: 3%;
+    //padding-right: 3%;
 
-    .carnames {
-      font-size: 32px;
-      position: absolute;
-      color: white;
-      top: 3%;
-      left: 12%;
-    }
+    //.carnames {
+    //  font-size: 32px;
+    //  position: absolute;
+    //  color: white;
+    //  top: 3%;
+    //  left: 12%;
+    //  z-index: 24;
+    //}
 
     img {
       position: absolute;
-      bottom: 10%;
+      bottom: 8%;
+      width: 100%;
     }
   }
 

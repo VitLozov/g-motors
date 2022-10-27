@@ -207,6 +207,13 @@ header {
   overflow: hidden;
   position: relative;
   margin-bottom: 30px; }
+  .car-block .carnames {
+    font-size: 32px;
+    position: absolute;
+    color: white;
+    top: 3%;
+    left: 10%;
+    z-index: 24; }
   .car-block .greenback {
     position: absolute;
     background-image: url("../images/green_back-2.svg");
@@ -221,15 +228,10 @@ header {
   .car-block .carplace {
     min-height: 200px;
     position: relative; }
-    .car-block .carplace .carnames {
-      font-size: 32px;
-      position: absolute;
-      color: white;
-      top: 3%;
-      left: 12%; }
     .car-block .carplace img {
       position: absolute;
-      bottom: 10%; }
+      bottom: 8%;
+      width: 100%; }
   .car-block .item .carinfo {
     margin-top: 5px;
     margin-left: 5px;
