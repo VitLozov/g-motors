@@ -127,6 +127,7 @@ header {
   .lang-change {
     position: absolute;
     right: 0;
+    opacity: 0;
   }
 
   .contact-button-top {
@@ -627,6 +628,10 @@ header {
   .cont-phone {
     font-size: 20px;
     line-height: 50px;
+    a{
+      text-decoration: none;
+      color: white;
+    }
   }
 
   .cont-email {

@@ -92,7 +92,8 @@ header {
             display: none; } }
   header .lang-change {
     position: absolute;
-    right: 0; }
+    right: 0;
+    opacity: 0; }
   header .contact-button-top {
     margin-left: 15%; }
     header .contact-button-top .contact-button-top-circle {
@@ -452,6 +453,9 @@ header {
   .sec-contacts .cont-phone {
     font-size: 20px;
     line-height: 50px; }
+    .sec-contacts .cont-phone a {
+      text-decoration: none;
+      color: white; }
   .sec-contacts .cont-email {
     line-height: 50px; }
   .sec-contacts .cont-telega {
