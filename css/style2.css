@@ -255,6 +255,9 @@ header {
   max-width: 84%;
   margin: auto; }
 
+.s-link {
+  margin: 14px; }
+
 .sec-search {
   background-color: #3f3f3f;
   padding-top: 220px;
