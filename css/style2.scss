@@ -367,6 +367,60 @@ header {
   margin: auto;
 }
 
+.sec-search {
+  background-color: rgba(63, 63, 63, 1);
+  padding-top: 220px;
+  height: 110vh;
+  padding-bottom: 0px;
+  color: white;
+  .s-name{
+    position: relative;
+    z-index: 9;
+  }
+  .s-field {
+    //margin: 30px;
+    margin-top: 10px;
+    width: 350px;
+    background-color: ghostwhite;
+    position: relative;
+    z-index: 8;
+  }
+  .btn-search{
+    background-color: #96c34e;
+    color: #FFFFFF;
+    width: 110px;
+    position: relative;
+    z-index: 9;
+
+  }
+  .s-carimg-cont{
+      position: absolute;
+      left: 550px;
+      top: 280px;
+      z-index: 0;
+      @include max-screen(991px) {
+        left: 320px;
+        top: 230px;
+      }
+      @include max-screen(575px) {
+        left: 110px;
+        top: 330px;
+      }
+
+      img {
+        max-width: 1180px;
+        z-index: 0;
+        @include max-screen(991px) {
+          max-width: 700px;
+        }
+        @include max-screen(767px) {
+          max-width: 600px;
+        }
+      }
+
+  }
+}
+
 .sec-how-to-buy {
   background-color: rgba(63, 63, 63, 1);
   padding-top: 80px;
@@ -766,9 +820,17 @@ header {
       height: 100%;
 
     }
-label{
-  display: none;
-}
+    .btn-vidpravyty{
+      padding-left: 6%;
+      @include max-screen(767px) {
+        padding-left: 0;
+      }
+    }
+
+    label {
+      display: none;
+    }
+
     input {
       line-height: 60px;
       padding: 0;
@@ -791,12 +853,12 @@ label{
       position: absolute;
       right: 5px;
       height: 60px;
-      width: 33%;
+      width: 32%;
       border-radius: 35px;
       @include max-screen(767px) {
 
         width: 96%;
-bottom: 5px;
+        bottom: 5px;
         right: 2%;
       }
     }
@@ -838,10 +900,10 @@ bottom: 5px;
   gap: 20px;
   justify-content: center;
   @include max-screen(767px) {
-    span{
+    span {
       font-size: 10px;
     }
-    a{
+    a {
       font-size: 10px;
     }
     font-size: 12px;
