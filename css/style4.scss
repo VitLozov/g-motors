@@ -162,7 +162,17 @@ header {
 
 
   }
+}
 
+.stegity{
+  background-color: #96c34e;
+  height: 100%;
+  width: 120%;
+  padding-left: 10%;
+  margin-left: -10%;
+  .stg-txt{
+    font-size: 24px;
+  }
 }
 
 .sec-main {

@@ -116,6 +116,15 @@ header {
       color: white;
       font-size: 18px; }
 
+.stegity {
+  background-color: #96c34e;
+  height: 100%;
+  width: 120%;
+  padding-left: 10%;
+  margin-left: -10%; }
+  .stegity .stg-txt {
+    font-size: 24px; }
+
 .sec-main {
   height: 100vh;
   position: relative;
@@ -867,4 +876,4 @@ footer {
   50%, 100% {
     transform: translateY(0); } }
 
-/*# sourceMappingURL=style3.css.map */
+/*# sourceMappingURL=style4.css.map */
